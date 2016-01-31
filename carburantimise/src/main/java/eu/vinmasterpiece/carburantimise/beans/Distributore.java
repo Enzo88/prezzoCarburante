@@ -1,7 +1,11 @@
 package eu.vinmasterpiece.carburantimise.beans;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
 import java.util.Date;
 import java.util.List;
+
+import eu.vinmasterpiece.carburantimise.util.DateConverter;
 
 /**
  * Created by vincenzo on 26/01/16.
@@ -9,9 +13,10 @@ import java.util.List;
 public class Distributore {
     private String bnd;
     private String addr;
+    @JsonDeserialize(converter = DateConverter.class)
     private Date dIns;
-    private Long lat;
-    private Long lon;
+    private Double lat;
+    private Double lon;
     private List<Carburante> carburanti;
     private String name;
     private Integer id;
@@ -56,19 +61,19 @@ public class Distributore {
         this.dIns = dIns;
     }
 
-    public Long getLat() {
+    public Double getLat() {
         return lat;
     }
 
-    public void setLat(Long lat) {
+    public void setLat(Double lat) {
         this.lat = lat;
     }
 
-    public Long getLon() {
+    public Double getLon() {
         return lon;
     }
 
-    public void setLon(Long lon) {
+    public void setLon(Double lon) {
         this.lon = lon;
     }
 
