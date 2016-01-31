@@ -31,6 +31,9 @@ android {
         exclude 'META-INF/dependencies.txt'
         exclude 'META-INF/LGPL2.1'
     }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
 }
 
 dependencies {
@@ -41,4 +44,7 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-databind:2.7.0'
     testCompile 'org.springframework.android:spring-android-rest-template:2.0.0.M3'
     testCompile 'com.fasterxml.jackson.core:jackson-databind:2.7.0'
+    testCompile 'org.apache.httpcomponents:httpclient:4.5.1'
+    testCompile group: 'org.apache.httpcomponents' , name: 'httpclient-android' , version: '4.3.5.1'
+
 }

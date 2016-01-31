@@ -1,5 +1,6 @@
 package eu.vinmasterpiece.prezzocarburante;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+
+import eu.vinmasterpiece.carburantimise.enumerations.Regions;
+import eu.vinmasterpiece.carburantimise.service.CarburantiService;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -40,6 +45,13 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        final Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                new RestTask().execute(null, null);
+            }
+        });
     }
 
     @Override
@@ -97,5 +109,18 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private class RestTask extends AsyncTask<Void, Void, Void> {
+        protected Void doInBackground(Void... urls) {
+            new CarburantiService().getProvince(Regions.LAZIO);
+            return null;
+        }
+
+        protected void onProgressUpdate(Void... progress) {
+        }
+
+        protected void onPostExecute(Void result) {
+        }
     }
 }
