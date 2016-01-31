@@ -1,5 +1,7 @@
 package eu.vinmasterpiece.carburantimise.beans;
 
+import java.util.List;
+
 /**
  * Created by vincenzo on 26/01/16.
  */
@@ -7,7 +9,7 @@ public class CarburantiResponse {
     private Boolean success;
     private Position center;
     private Boolean priceSort;
-    private Distributore array;
+    private List<Distributore> array;
 
     public Boolean getSuccess() {
         return success;
@@ -33,11 +35,11 @@ public class CarburantiResponse {
         this.priceSort = priceSort;
     }
 
-    public Distributore getArray() {
+    public List<Distributore> getArray() {
         return array;
     }
 
-    public void setArray(Distributore array) {
+    public void setArray(List<Distributore> array) {
         this.array = array;
     }
 }
