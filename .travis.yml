@@ -13,3 +13,8 @@ android:
     - extra-google-m2repository
     - extra-android-m2repository
     - addon-google_apis-google-23
+
+before_install:
+  - pip install --user codecov
+after_success:
+  - codecov
