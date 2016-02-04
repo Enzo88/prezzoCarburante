@@ -22,7 +22,7 @@ import static org.junit.Assert.*;
 
 public class ExampleUnitTest {
 
-    @Test
+    //@Test
     public void addition_isCorrect() throws Exception {
        /* SSLContext sslContext = SSLContext.getInstance("TLSv1.2");
         sslContext.init(null, null, null);
