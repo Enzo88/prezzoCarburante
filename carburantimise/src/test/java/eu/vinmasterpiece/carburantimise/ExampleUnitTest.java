@@ -1,6 +1,6 @@
 package eu.vinmasterpiece.carburantimise;
 
-import android.content.Context;
+/*import android.content.Context;
 import android.net.SSLCertificateSocketFactory;
 
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 import javax.net.ssl.SSLContext;
 
 import static org.junit.Assert.*;
-
+*/
 /**
  * To work on unit tests, switch the Test Artifact in the Build Variants view.
  */
