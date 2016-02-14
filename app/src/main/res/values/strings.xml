@@ -1,9 +1,14 @@
 <resources>
     <string name="app_name">Prezzo Carburante</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Prezzzo Carburante</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Impostazioni</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment1">fragment2</string>
+    <string name="title_activity_mappa_distributori">Map</string>
 </resources>
